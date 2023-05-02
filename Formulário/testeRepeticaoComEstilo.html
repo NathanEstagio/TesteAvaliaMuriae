@@ -1,0 +1,115 @@
+<!DOCTYPE html> <!-- define o tipo de documento como html -->
+<html>
+<!-- abre a tag html -->
+
+<head>
+    <!-- abre a tag head, onde ficam as informações do cabeçalho do documento -->
+    <title>Formulário com CSS personalizado</title> <!-- define o título da página exibido na aba do navegador -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- define a escala inicial e largura do dispositivo -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- linka a folha de estilos do Bootstrap -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!-- linka o jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- linka o Popper.js -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="conexaoGoogleSheet.js"></script>
+    <!-- linka o Bootstrap -->
+    <link rel="stylesheet" href="styleRepeticao.css">
+    <!-- linka a folha de estilos personalizada para repetição de campos -->
+</head> <!-- fecha a tag head -->
+
+<body>
+    <!-- abre a tag body -->
+    <div style="background-color: white; height: 100px; width: 100%; display: flex; justify-content: center;">
+        <!-- Cria um cabeçalho -->
+        <div style="border: 10px solid white; align-self: center;">
+            <img src="AvaliaMuriae.png" alt="Minha Figura"
+                style="max-height: 80px; max-width: 100%; display: block; margin: 0 auto;">
+        </div>
+    </div>
+
+    <!-- Criação de um container para a página -->
+    <div class="container mt-5">
+        <!-- Criação de um formulário -->
+        <form>
+            <!-- Criação de um grupo de formulário -->
+            <div class="form-group">
+                <!-- Criação de um rótulo para o elemento de seleção de escola -->
+                <label for="escola">Escola:</label>
+                <!-- Criação de um elemento de seleção de escola, com ID "escola" e name "escola" -->
+
+                <select class="form-control" id="escola" name="escola" required>
+                    <option value="">Escola</option>
+                </select>
+
+            </div>
+            <!-- Cria um grupo de formulário -->
+            <div class="form-group">
+                <!-- Cria um rótulo para o campo "Ano" -->
+                <label for="ano">Ano:</label>
+                <!-- Cria um campo de seleção de ano com identificador "ano" e nome "ano" -->
+
+                <select class="form-control" id="ano" name="ano" required>
+                    <option value="">Ano</option>
+                </select>
+
+            </div>
+
+            <!-- Cria um grupo de formulário -->
+            <div class="form-group">
+                <!-- Cria um rótulo para o campo "Turma" -->
+                <label for="turma">Turma:</label>
+                <!-- Cria um campo de seleção de turma com identificador "turma" e nome "turma" -->
+
+                <select class="form-control" id="turma" name="turma" required>
+                    <option value="">Turma</option>
+                </select>
+
+            </div>
+            <div class="form-group">
+                <label for="disciplina">Disciplina:</label>
+                <!-- Select para escolher a disciplina -->
+                <select class="form-control" id="disciplina" name="disciplina">
+                    <option value="" disabled selected>Selecione uma Disciplina</option>
+                    <option value="matematica">Matematica</option>
+                    <option value="portugues">Lingua Portuguesa</option>
+                </select>
+            </div>
+            <!-- Botão para filtrar a tabela de alunos -->
+            <button id="btnFiltrar" type="submit" class="btn btn-primary">Filtrar</button>
+            <!-- Mostra a mensagem do filtro -->
+            <div id="mensagem"></div>
+
+        </form> <!-- Fecha a tag do formulário anterior -->
+    </div> <!-- Fecha a tag da div anterior -->
+
+    <div class="container mt-5">
+        <form>
+            <label for="alunos">Alunos:</label>
+            <!-- Select para escolher o aluno -->
+            <select class="form-control" id="alunos" name="alunos">
+                <option value="" disabled selected>Selecione o Aluno</option>
+            </select>
+        </form>
+        <br>
+        <form id="formulario">
+            <!-- Script para adicionar 25 questões utilizando radios -->
+            <script type="text/javascript" src="jsRepeticao.js"></script>
+        </form>
+        <br>
+        <form>
+            <!-- Botão para enviar o formulário -->
+            <button id="btnEnviar" type="button" class="btn btn-primary">Enviar</button>
+            <div id="mensagemEnviar" class="alert"></div>
+            <script src="botaoEnviar.js"></script>
+        </form>
+    </div>
+
+</body> <!-- Fecha a tag do body anterior -->
+
+<br><br>
+
+</html> <!-- Fecha a tag do html anterior -->
